@@ -13,10 +13,10 @@ function svy_cnv_userOrgID() {
 	
 	databaseManager.startTransaction();
 	
-	/** @type {JSFoundset<db:/svy_framework/sec_user_org>} */
+	/** @type {JSFoundSet<db:/svy_framework/sec_user_org>} */
 	var _fsUserOrg = databaseManager.getFoundSet(globals.nav_db_framework, 'sec_user_org');
 	
-	/** @type {JSFoundset<db:/svy_framework/nav_advanced_search>} */
+	/** @type {JSFoundSet<db:/svy_framework/nav_advanced_search>} */
 	var _fsAdvancedSearch = databaseManager.getFoundSet(globals.nav_db_framework, 'nav_advanced_search');
 	_fsAdvancedSearch.loadAllRecords();
 	
@@ -34,7 +34,7 @@ function svy_cnv_userOrgID() {
 		}
 	}
 	
-	/** @type {JSFoundset<db:/svy_framework/nav_bookmarks>} */
+	/** @type {JSFoundSet<db:/svy_framework/nav_bookmarks>} */
 	var _fsBookmarks = databaseManager.getFoundSet(globals.nav_db_framework, 'nav_bookmarks');
 	_fsBookmarks.loadAllRecords();
 	
@@ -52,7 +52,7 @@ function svy_cnv_userOrgID() {
 		}
 	}
 	
-	/** @type {JSFoundset<db:/svy_framework/nav_shortcut>} */
+	/** @type {JSFoundSet<db:/svy_framework/nav_shortcut>} */
 	var _fsShortcut = databaseManager.getFoundSet(globals.nav_db_framework, 'nav_shortcut');
 	_fsShortcut.loadAllRecords();
 	
@@ -70,7 +70,7 @@ function svy_cnv_userOrgID() {
 		}
 	}
 	
-	/** @type {JSFoundset<db:/svy_framework/nav_user_table_view>} */
+	/** @type {JSFoundSet<db:/svy_framework/nav_user_table_view>} */
 	var _fsUserTableView = databaseManager.getFoundSet(globals.nav_db_framework, 'nav_user_table_view');
 	_fsUserTableView.loadAllRecords();
 	
@@ -88,7 +88,7 @@ function svy_cnv_userOrgID() {
 		}
 	}
 	
-	/** @type {JSFoundset<db:/svy_framework/search_criteria>} */
+	/** @type {JSFoundSet<db:/svy_framework/search_criteria>} */
 	var _fsSearchCriteria = databaseManager.getFoundSet(globals.nav_db_framework, 'search_criteria');
 	_fsSearchCriteria.loadAllRecords();
 	
@@ -106,7 +106,7 @@ function svy_cnv_userOrgID() {
 		}
 	}
 	
-	/** @type {JSFoundset<db:/svy_framework/sec_user_table_properties>} */
+	/** @type {JSFoundSet<db:/svy_framework/sec_user_table_properties>} */
 	var _fsUserTableProperties = databaseManager.getFoundSet(globals.nav_db_framework, 'sec_user_table_properties');
 	_fsUserTableProperties.loadAllRecords();
 	
@@ -143,13 +143,13 @@ function svy_cnv_userOrgID() {
 function svy_cnv_setUpMail(event) {
 	
 	var _tabsRec = null;
-	/** @type {JSFoundset<db:/svy_framework/nav_menu>} */
+	/** @type {JSFoundSet<db:/svy_framework/nav_menu>} */
 	var _menuFs = null;
 	var _menuItemRec = null;
 	var _parent = null;
 	var _navKeyRec = null;
 	
-	/** @type {JSFoundset<db:/svy_framework/nav_program>} */
+	/** @type {JSFoundSet<db:/svy_framework/nav_program>} */
 	var _programFs = databaseManager.getFoundSet('svy_framework', 'nav_program');
 	
 	if (_programFs.find()) {
@@ -721,7 +721,7 @@ function svy_cnv_setUpDocumentManagement() {
 	var _tabsRec = null;
 	var _navKeyRec = null;
 	
-	/** @type {JSFoundset<db:/svy_framework/nav_program>} */
+	/** @type {JSFoundSet<db:/svy_framework/nav_program>} */
 	var _programFs = databaseManager.getFoundSet('svy_framework', 'nav_program');
 	
 	if (_programFs.find()) {
@@ -873,7 +873,7 @@ function svy_cnv_setUpDocumentManagement() {
  */
 function svy_cnv_securityKey(_keyName) {
 	
-	/** @type {JSFoundset<db:/svy_framework/sec_security_key>} */
+	/** @type {JSFoundSet<db:/svy_framework/sec_security_key>} */
 	var _secKeyFs = null;
 	
 	_secKeyFs = databaseManager.getFoundSet('db:/svy_framework/sec_security_key');
