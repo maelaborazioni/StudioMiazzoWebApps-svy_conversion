@@ -677,7 +677,7 @@ function svy_cnv_pkToUUID() {
 								}
 							
 								/**** Remove old field and rename new field to old name for foreign table*/										
-								if (plugins.rawSQL.executeSQL(_server, _foreignTableName, _sql1, null)) {						
+								if (plugins.rawSQL.executeSQL(_server, _sql1, null)) {						
 									plugins.rawSQL.flushAllClientsCache(_server, _foreignTableName);
 									application.output('Removed and renamed field in ' + _foreignTableName)
 								}
@@ -691,7 +691,7 @@ function svy_cnv_pkToUUID() {
 					'ALTER TABLE ' + _table + ' RENAME ' + _jsOldIdColumn.getSQLName() + '2' + '  TO ' + _jsOldIdColumn.getSQLName() + ';'
 				}
 				/**** Remove old field and rename new field to old name for SOurce table*/										
-				if (plugins.rawSQL.executeSQL(_server, _table, _sql1, null)) {
+				if (plugins.rawSQL.executeSQL(_server, _sql1, null)) {
 					plugins.rawSQL.flushAllClientsCache(_server, _table);
 					application.output('Removed and renamed field in ' + _table)
 				}
@@ -920,7 +920,7 @@ function svy_cnv_convertNavHelp() {
 			
 //			_helpRec['help_title'] = _helpRec['title'];
 			var _sql = 'UPDATE nav_help SET help_title = ? WHERE help_id = ?'
-			plugins.rawSQL.executeSQL(_server, _tableName, _sql, [_helpRec['title'], _helpRec['help_id']])
+			plugins.rawSQL.executeSQL(_server, _sql, [_helpRec['title'], _helpRec['help_id']])
 		}	
 		
 		_table.deleteColumn('title');
